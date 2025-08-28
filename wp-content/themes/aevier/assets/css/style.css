@@ -55,7 +55,6 @@ p {
     color: var(--grey);
 }
 
-
 .bold-text {
     font-family: 'SwissFont', sans-serif;
     font-weight: 700;
@@ -321,6 +320,11 @@ p {
     margin-bottom: 0;
 }
 
+.collection-content .textContent a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .textContent {
     position: relative;
     padding: 30px 0;
@@ -354,6 +358,7 @@ p {
     right: 0;
     left: auto;
 }
+
 
 
 /* .navigation-arrows .swiper-button-next, .swiper-button-prev{
@@ -402,12 +407,13 @@ p {
     margin-bottom: 50px;
 }
 
-.footer-section{
+.footer-section {
     padding-top: 70px;
     padding-bottom: 20px;
 }
 
-.footer-section a, .footer-section  p{
+.footer-section a,
+.footer-section p {
     color: #fff;
     text-decoration: unset;
     font-size: 1rem;
@@ -454,12 +460,11 @@ p {
     .footer-box {
         border-right: 0px !important;
         border-bottom: 0.5px solid #FFFFFF;
-
     }
 
     .intro-section {
-    padding-left: 2rem;
-    padding-right: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     /* .intro-text {
@@ -510,20 +515,21 @@ p {
         top: 85px!important;
     } */
 
-    .footer-section a, .footer-section p {
+    .footer-section a,
+    .footer-section p {
         text-align: center;
-        margin-bottom: 15px!important;
+        margin-bottom: 15px !important;
     }
-  
+
     .footer-icons {
-        margin-top: 15px!important;
+        margin-top: 15px !important;
     }
 
     .footer-icons a {
-    margin: 0 15px!important;
-}
+        margin: 0 15px !important;
+    }
 
-/* .intro-section::before {
+    /* .intro-section::before {
     content: '';
     position: absolute;
     left: 40%;
@@ -532,11 +538,11 @@ p {
     background-color: var(--golden);
 } */
 
-/* .mailBox, .iconBox {
+    /* .mailBox, .iconBox {
     text-align: center;
 } */
 
-/* .hero-text-section {
+    /* .hero-text-section {
     bottom: 0;
 } */
 
@@ -557,9 +563,9 @@ p {
     text-align: justify;
 }
 
-.disclaimerContent p:first-child {
+/* .disclaimerContent p:first-child {
     margin-bottom: 10px;
-}
+} */
 
 .disclaimerContent p strong {
     letter-spacing: 1px;

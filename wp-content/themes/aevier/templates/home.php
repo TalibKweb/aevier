@@ -99,7 +99,7 @@ get_header();
                     </div>
                     <div class="col-md-5 position-relative">
                         <div class="collection-content p-2 swiss-regular">
-
+                            
                             <div class="textContent">
                                 <h3><a href="<?php echo the_permalink() ?>"><?php echo the_title() ?></a></h3>
                                 <p><?php echo get_field('subtitle') ?></p>
@@ -111,12 +111,44 @@ get_header();
                 </div>
             <?php
             endwhile;
+            wp_reset_postdata();
         else:
             ?>
-
             <h3>No Collections Found!</h3>
 
         <?php endif; ?>
+
+    </div>
+</section>
+
+
+<section class="contact-form-sec ">
+    <div class="container">
+
+        <div class="image-section">
+            <img src="<?php echo get_field('cont_image')['url'] ?>" alt="">
+            <!-- <img src="https://via.placeholder.com/450x400" alt="Contact Us"> -->
+        </div>
+
+        <div class="form-section">
+
+            <!-- <h3 class="mb-4">Get in Touch</h3> -->
+            <?php if (get_field('cont_title')): ?>
+                <h3 class="mb-4"><?php echo the_field('cont_title'); ?></h3>
+            <?php endif; ?>
+
+            <!-- <h3 class="mb-4">Get in Touch</h3> -->
+            <!-- <form action="#" method="post">
+                <div class="d-flex flex-col flex-md-row gap-3 name-email-cont ">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <textarea rows="6" name="message" placeholder="Your Message" required></textarea>
+                <button class="btn " type="submit">Send Message</button>
+            </form> -->
+            <?php echo do_shortcode('[contact-form-7 id="accce02" title="Contact Form"]'); ?>
+        </div>
 
     </div>
 </section>

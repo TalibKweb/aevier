@@ -1,0 +1,150 @@
+/* >>>>>>>>>>>>>>>>>>>>>>> Contact form sec Home Page  */
+.contact-form-sec {
+    border-top: 1px solid #dbdbdb;
+    padding: 50px 0px 60px;
+}
+
+.contact-form-sec .container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact-form-sec .image-section {
+    width: 45%;
+}
+
+.contact-form-sec .form-section {
+    width: 55%;
+}
+
+.contact-form-sec .form-section h3 {
+    color: var(--golden);
+    font-family: 'RoadRadio', sans-serif;
+}
+
+.contact-form-sec .image-section img {
+    width: 90%;
+    min-height: 360px;
+    object-fit: cover;
+}
+
+.contact-form-sec .form-section {
+    flex: 1;
+}
+
+.contact-form-sec form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form-sec form p {
+    margin: 0 !important;
+}
+
+.contact-form-sec form .name-email-cont,
+.contact-form-sec form .name-email-cont p {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.contact-form-sec input,
+.contact-form-sec textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b9b9b9;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: "SwissFont-Regular";
+}
+
+.contact-form-sec input:focus,
+.contact-form-sec textarea:focus {
+    border: 1px solid var(--golden);
+    outline: 0;
+}
+
+.contact-form-sec textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form-sec input[type="submit"],
+.contact-form-sec button {
+    font-family: "SwissFont-Regular";
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    width: fit-content;
+    padding: 10px 40px;
+    border-radius: 6px;
+    background: var(--golden);
+    transition: .25s all ease-in-out;
+}
+
+.contact-form-sec input[type="submit"]:hover,
+.contact-form-sec button:hover {
+    background: var(--golden);
+    color: #fff;
+    box-shadow: -1px 2px 12px 0px #ababab;
+    transition: .25s all ease-in-out;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>> Validations CSS */
+.contact-form-sec .wpcf7-not-valid-tip {
+    color: var(--golden);
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.contact-form-sec .wpcf7-response-output {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-weight: 400 !important;
+    color: var(--golden) !important;
+    font-size: 17px;
+    font-weight: 500 !important;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>> Spinner Loader */
+.contact-form-sec form p {
+    position: relative;
+}
+
+.contact-form-sec .wpcf7-spinner {
+    background-color: var(--golden);
+    margin: 0 16px;
+    position: absolute;
+    top: 12px;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>> ENDS Spinner Loader */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>> Tab and Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .contact-form-sec .image-section img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-form-sec .container {
+        gap: 10px;
+        padding: 0px 20px;
+        flex-direction: column;
+    }
+
+    .contact-form-sec .image-section,
+    .contact-form-sec .form-section {
+        width: 100%;
+    }
+
+    .contact-form-sec form .name-email-cont,
+    .contact-form-sec form .name-email-cont p {
+        flex-direction: column;
+    }
+}

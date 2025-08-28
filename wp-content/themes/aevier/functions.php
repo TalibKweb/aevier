@@ -23,18 +23,6 @@ function aevier_register_menus() {
 add_action('after_setup_theme', 'aevier_register_menus');
 
 
-// >>>>>>>>>>>>>>>>>>>>> Disable Default Custom Styling of CF7
-add_filter('wpcf7_load_css', '__return_false');
-
-
-// >>>>>>>>>>>>>>>>>>>>> Disable Default Custom Styling of CF7
-add_filter('wpcf7_form_elements', function ($content) {
-    // remove extra <span> wrappers
-    $content = preg_replace('/<span class="wpcf7-form-control-wrap[^"]*">(.*?)<\/span>/', '$1', $content);
-    return $content;
-});
-
-
 // >>>>>>>>>>>>>>>>>>>>> Enable support for featured images
 add_theme_support('post-thumbnails');
 

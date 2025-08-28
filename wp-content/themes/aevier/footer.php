@@ -15,7 +15,6 @@
         endwhile;
       else:
         ?>
-
         <h5>No Pointers Found!</h5>
       <?php
       endif;
@@ -24,11 +23,14 @@
       <hr>
     </div>
 
-
-
     <div class="row justify-content-center align-items-center pt-2">
       <div class="col-md-4 footer-block px-4 mailBox text-center">
-        <p><a href="mailto:info@aevier.com">info@aevier.com</a></p>
+        <!-- <p><a href="mailto:info@aevier.com">info@aevier.com</a></p> -->
+
+        <?php if (get_field('company_mail_id', 'option')): ?>
+          <p><a href="mailto:<?php echo the_field('company_mail_id', 'option') ?>"><?php echo the_field('company_mail_id', 'option') ?></a></p>
+        <?php endif; ?>
+
       </div>
 
       <div class="col-md-4 footer-block px-4">
@@ -40,7 +42,6 @@
       <div class="col-md-4 footer-block px-4 iconBox">
         <div class="d-inline-flex justify-content-center align-items-center footer-icons">
 
-
           <?php
           if (have_rows('socials', 'option')):
             while (have_rows('socials', 'option')): the_row();
@@ -50,7 +51,6 @@
             endwhile;
           else:
             ?>
-
             <p>No Pointers Found!</p>
           <?php
           endif;
@@ -89,6 +89,8 @@
   //     },
   // });
 </script>
+
+<?php wp_footer(); ?>
 
 </body>
 
